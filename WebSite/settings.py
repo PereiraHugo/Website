@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r_o$gvc4r54uy*zfl)*598ztpci%n%@f#!=52j1vw6ts=p+@09'
+SECRET_KEY = os.environ['djangoKey']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'crispy_forms',
+    'fa',
+    'Portfolio'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +75,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'WebSite.wsgi.application'
 
 
+# My contact email
+
+EMAIL_HOST_USER = os.environ['myEmail']
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_PASSWORD = os.environ['myEmailPassword']
+
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -101,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
+# https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -115,6 +128,11 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
+
+
+if DEBUG:
+    MEDIA_URL = '/Media/'
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "Static", "Static-only")
+    STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),"Static", "Static"),)
