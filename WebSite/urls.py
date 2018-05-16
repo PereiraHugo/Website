@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+"""
+from django.conf.urls import url, include
+from django.contrib import admin
+"""
+from Portfolio import views as portfolio_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^$', portfolio_views.home, name='home'),
+    url(r'^projects/$', portfolio_views.projects, name='projects'),
+    url(r'^photography/$', portfolio_views.photography, name='photography'),
+    url(r'^about/$', portfolio_views.about, name='about'),
+    url(r'^contact/$', portfolio_views.contact, name='contact'),
 ]
