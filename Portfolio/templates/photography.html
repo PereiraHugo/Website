@@ -1,0 +1,81 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block body %}
+<!-- modal -->
+<div id="photographyModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="imgModal">
+	<div id="caption" style="text-align: center; font-size: 18pt"></div>
+</div>
+<!-- modal -->
+<div id="photography" class="photography">
+	<div class="container">
+		<!-- header category photography -->
+		<div class="header-category header_photography">
+			<table>
+				<td style="width: 90%">
+					<h1>Photography Gallery</h1>
+				</td>
+				<td style="width: 10%">
+					<img src="{% static 'images/Photography.svg' %}" class="icon" alt="icon photography" style="text-align: right;">
+				</td>
+			</table>
+		</div>
+		<!-- header category photography -->
+		<!-- Table For 3 picture per row, picture will be circle at first then hover will extend them, click on them = popup picture -->
+		<table class="table_picture">
+			<tr>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg1" onclick="ModalPicture(id)">
+				</td>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg2" onclick="ModalPicture(id)">
+				</td>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg2" onclick="ModalPicture(id)">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg2" onclick="ModalPicture(id)">
+				</td>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg2" onclick="ModalPicture(id)">
+				</td>
+				<td>
+					<img src="{% static 'images/img_avatar.png' %}" alt="Avatar" class="pictures_table" id="myImg2" onclick="ModalPicture(id)">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script>
+	function ModalPicture(id)
+	{
+	// Get the modal
+	var modal = document.getElementById('photographyModal');
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById(id);
+	var modalImg = document.getElementById("imgModal");
+	var captionText = document.getElementById("caption");
+	img.onclick = function(){
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+}
+</script>
+{% endblock %}
+
+
+
