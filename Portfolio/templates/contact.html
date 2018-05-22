@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block body %}
+<div id="contact" class="contact">
+	<div id="contact_form" class="container">
+		<!-- header category contact -->
+		<div class="header-category header_contact">
+			<table>
+				<td style="width: 90%">
+					<h1>Contact Me</h1>
+				</td>
+				<td style="width: 10%">
+					<img src="{% static 'images/Contact.svg' %}" class="icon" alt="icon contact" style="text-align: right;">
+				</td>
+			</table>
+		</div>
+		<!-- header category contact -->
+		<!-- global message contact -->
+		<p>
+			If you would like to send me some comments about my work, just get in touch using this Contact Form, it would be great to hear from you.
+		</p>
+		<p>
+			Leave your name, email address and message and I will reply to you as quickly as possible.
+		</p>
+		<br />
+		<!-- global message contact -->
+		<!-- form -->
+		{% if form %}
+		<div class="contact-form-container">
+			<form id="contact" method="post"> {% csrf_token %}
+				{{ form|crispy }}
+				<div class="form-actions">
+					<button id="contact_submit" name="contact_submit" type="submit" class="btn_contact_sbm">Send</button>
+				</div>
+			</form>
+			<!-- form -->
+		</div>
+		<!-- Message if Successful -->
+		{% endif %}
+		{% if confifrmed_message %}
+	</br>
+	</br>
+		<p style="text-align: center; font-size: 2em">
+			{{confifrmed_message}}
+		</p>
+		{% endif %}
+		<!-- Message if Successful -->
+	</div>
+</div>
+{% endblock %}

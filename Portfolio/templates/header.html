@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!-- header -->
+<div id="hNavBar" class="fixed-top ">
+  <nav class="navbar navbar-expand-md navbar-customized">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        {% url 'about' as about %}
+        <li {% if request.path == about %} class="active" {% endif %}>
+          <a class="nav-link" href="{% url 'about' %}" role="button"> About Me </a>
+        </li>
+        {% url 'projects' as projects %}
+        <li {% if request.path == projects %} class="active" {% endif %}>
+          <a class="nav-link" href="{% url 'projects' %}" role="button"> Projects </a>
+        </li>
+        {% url 'home' as home %}
+        <li {% if request.path == home %} class="active" {% endif %}>
+          <a class="nav-link" href="{% url 'home' %}" role="button" style="padding:0; "><img src="{% static 'images/Logo.svg' %}" alt="Logo" class="header_logo"></a>
+        </li>
+        {% url 'photography' as photography %}
+        <li {% if request.path == photography %} class="active" {% endif %}>
+          <a class="nav-link" href="{% url 'photography' %}" role="button"> Photography </a>
+        </li>
+        {% url 'contact' as contact %}
+        <li {% if request.path == contact %} class="active" {% endif %}>
+          <a class="nav-link" href="{% url 'contact' %}" class="fa fa-envelope" role="button"> Contact </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- header -->
