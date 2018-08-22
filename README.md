@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to install python3. After this you need to install all the library contains in requirements.txt
+You need to install python3. After this, you need to install all the library contained in requirements.txt
 
 ## Code
 
@@ -15,7 +15,7 @@ git clone https://github.com/PereiraHugo/Website.git
 
 ## Running the program
 
-To run localy the website :
+To run  the website localy :
 ```
 python Website/manage.py runserver
 ```
