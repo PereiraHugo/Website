@@ -1,0 +1,21 @@
+{
+    "Name": "Hey there, I’m Hugo Pereira.",
+    "WhoAmI": "I’m a Software Developer Engineer based in Palmerston North, New Zealand. I’m passionate about Computer Science and have a background in Biology.",
+    "Skills": "During my formation in Bioinformatics, I developed easily transposable Software Engineer skills such as software development, user requirements gathering, data analysis, statistics and systemics.",
+    "Now": "Since then, I pride myself on…",
+    "Master": "I have a Master’s Degree in Bioinformatics delivered by the ",
+    "Master2": " (France) in 2015.",
+    "Portfolio": "This site serves as an online portfolio of past work as well as a home for various current projects.",
+    "Interest": "I also love traveling and improving my photography skills while discovering new places around the world.",
+    "Opportunities": "I am always open to exciting new job opportunities. You’re welcome to have a look at my work and you’ll find my Curriculum Vitae here. Please ",
+    "Opportunities2":" if you’d like, I look forward to hearing from you.",
+    "CEA_description": "NGS Workflow (RNAseq & Evolution) Modification and Improvement. Benchmarking of all workflow engines. Creation of a web GUI for the platform NGS services. ",
+    "CEA_skills": "Bash, Python, C, R, JavaScript, Php, HTML, Git, SVN, Workflow Engine (Snakemake, Nextflow, Bpipe, Ruffus, Luigi, Pegasus), user require-ments gathering.",
+    "CEA_supervisor": "Lead by S. Cruveiller, D. Vallenet",
+    "IRHS_description":"Interface development of a new clustering tool for Co-Regulated Genes Identification (CoRGI). Translation from VBA to R and JavaScript of new clustering method.",
+    "IRHS_skills":"JavaScript (Qooxdoo framework, library D3JS), Python & R computing, Git, user requirements gathering, tools for large datasets.",
+    "IRHS_supervisor":"Supervised by S. Pelletier, J-P. Renou and S. Gaillard",
+    "IPBS_description":"Construction of directed genetic networks, with the WGCNA method, involved in the support function of hematopoietic stem cells.",
+    "IPBS_skills": "R computing, Use of database and analysis tools such as Genomatix & miRTrail.",
+    "IPBS_supervisor": "Supervised by C. Durand and P. Charbord"
+}

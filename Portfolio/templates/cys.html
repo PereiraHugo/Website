@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block body %}
+<div id="cys" class="cys">
+    <div class="container">
+        <h1> <a href="http://cys.pereirahugo.ovh" target="_blank">Go to the app !</a></h1>
+        <br>
+        <p>
+            {{CYS_description}}
+        </p>
+        <p>
+            {{CYS_skills}}
+        </p>
+        <p>
+            {{CYS_adress}}<a href="http://cys.pereirahugo.ovh" target="_blank">cys.pereirahugo.ovh</a>. 
+            {{CYS_adress2}}<a href="http://api.pereirahugo.ovh" target="_blank">api.pereirahugo.ovh</a>.
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}

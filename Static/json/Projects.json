@@ -1,0 +1,20 @@
+[
+	{
+		"language":"Python",
+		"title":"Big Boss",
+		"type": "academic",
+		"time": 2
+	},
+	{
+		"language":"C#",
+		"title":"Jr Dev",
+		"type": "work",
+		"time": 3
+	},
+	{
+		"language":"R",
+		"title":"Jr Dev",
+		"type": "personal",
+		"time": 1
+	}
+]

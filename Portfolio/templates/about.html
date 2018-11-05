@@ -9,7 +9,7 @@
 				<td style="width: 90%">
 					<h1>About Me</h1>
 				</td>
-				<td style="width: 10%">
+				<td class="td_icon">
 					<img src="{% static 'images/About.svg' %}" class="icon" alt="icon about" style="text-align: right;">
 				</td>
 			</table>
@@ -18,34 +18,26 @@
 		<!-- header category about -->
 		<!-- global message about -->
 		<p>
-			Hey there, I’m Hugo Pereira.
+			{{Name}}
 		</p>
 		<p>
-			I’m a Software Developer Engineer based in Palmerston North, New Zealand. I’m passionate
-			about Computer Science and have a background in Biology.
+			{{WhoAmI}}
 		</p>
 		<p>
-			During my formation in Bioinformatics, I developed easily transposable Software Engineer
-			skills such as software development, user requirements gathering, data analysis, statistics and
-			systemics.
+			{{Skills}}
 		</p>
 		<p>
-			Since then, I pride myself on…
+			{{Now}}
 		</p>
 		<p>
-			I have a Master’s Degree in Bioinformatics delivered by the <a href="https://www.univ-
-			paris-diderot.fr/" target=";_blank">University Paris Diderot</a>; (France) in 2015.
-			This site serves as an online portfolio of past work as well as a home for various current
-			projects.
+			{{Master}}<a href='https://www.univ-paris-diderot.fr/' target=';_blank'>University Paris Diderot</a>{{Master2}}
+			{{Portfolio}}
 		</p>
 		<p>
-			I also love traveling and improving my photography skills while discovering new places
-			around the world.
+			{{Interest}}
 		</p>
 		<p>
-			I am always open to exciting new job opportunities. You’re welcome to have a look at my
-			work and you’ll find my Curriculum Vitae here. Please <a href="/contact/x²">get in
-			touch</a> if you’d like, I look forward to hearing from you.
+			{{Opportunities}}<a href="/contact/x²">get in touch</a>{{Opportunities2}}
 		</p>
 		<!-- global message about -->
 		<!-- skillset -->
@@ -98,6 +90,7 @@
 			<h3>Programming</h3>
 			<div id="d3draw" style="min-height: 600px; min-width: 600px;">
 				<svg id="timepiechart" style="display:block; margin-bottom: 1em;" ></svg>
+				<br>
 				<svg id="numberspiechart" style="display:block; margin:auto;"></svg>
 			</div>
 			<!-- Programming -->
@@ -115,8 +108,8 @@
 							<h4>GitHub</h4>
 						</td>
 						<td class="column_3">
-							<img src="{% static 'images/VisualStudio2017.svg' %}" alt="Visual Studio 2017" class="icon">
-							<h4>Visual Studio 2017</h4>
+							<img src="{% static 'images/VisualStudio2017.svg' %}" alt="Visual Studio Code & 2017" class="icon">
+							<h4>Visual Studio Code & 2017</h4>
 						</td>
 					</tr>
 					<tr>
@@ -138,6 +131,24 @@
 							<img src="{% static 'images/D3js.svg' %}" alt="D3js" class="icon">
 							<h4>D3js</h4>
 						</td>
+						<td class="column_3">
+							<img src="{% static 'images/Nodejs.svg' %}" alt="Nodejs" class="icon">
+							<h4>Nodejs</h4>
+						</td>
+						<td class="column_3">
+							<img src="{% static 'images/Angular.svg' %}" alt="Angular" class="icon">
+							<h4>Angular</h4>
+						</td>
+					</tr>
+					<tr>
+						<td class="column_3">
+							<img src="{% static 'images/MongoDB.svg' %}" alt="MongoDB" class="icon">
+							<h4>MongoDB</h4>
+						</td>
+						<td class="column_3">
+							<img src="{% static 'images/Express.svg' %}" alt="Express" class="icon">
+							<h4>Express</h4>
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -155,15 +166,13 @@
 							<h2>Research Engineer in Bioinformatics</h2>
 							<h2>Mai 2016 - November 2017</h2>
 							<p>
-								NGS Workflow (RNAseq &amp; Evolution) Modification and Improvement. Benchmarking of all workflow engines. Creation of a web GUI for the
-								platform NGS services. 
+								{{CEA_description}}
 							</p>
 							<p>
-								Bash, Python, C, R, JavaScript, Php, HTML, Git, SVN, Workflow Engine (Snakemake, Nextflow, Bpipe, Ruffus, Luigi, Pegasus), user require-
-								ments gathering.
+								{{CEA_skills}}
 							</p>
 							<p>
-								Lead by S. Cruveiller, D. Vallenet
+								{{CEA_supervisor}}
 							</p>
 						</td>
 					</tr>
@@ -176,13 +185,13 @@
 							<h2>Master’s Degree - 2nd year Internship</h2>
 							<h2>Fev 2015 - Jul 2015</h2>
 							<p>
-								Interface development of a new clustering tool for Co-Regulated Genes Identification (CoRGI). Translation from VBA to R and JavaScript of new clustering method.
+								{{IRHS_description}}
 							</p>
 							<p>
-								JavaScript (Qooxdoo framework, library D3JS), Python &amp; R computing, Git, user requirements gathering, tools for large datasets.
+								{{IRHS_skills}}
 							</p>
 							<p>
-								Supervised by S. Pelletier, J-P. Renou and S. Gaillard
+								{{IRHS_supervisor}}
 							</p>
 						</td>
 					</tr>
@@ -195,13 +204,13 @@
 							<h2>Master’s Degree - 1st year Internship</h2>
 							<h2>Mar 2014 - Jun 2014</h2>
 							<p>
-								Construction of directed genetic networks, with the WGCNA method, involved in the support function of hematopoietic stem cells.
+								{{IPBS_description}}
 							</p>
 							<p>
-								R computing, Use of database and analysis tools such as Genomatix &amp; miRTrail.
+								{{IPBS_skills}}
 							</p>
 							<p>
-								Supervised by C. Durand and P. Charbord
+								{{IPBS_supervisor}}
 							</p>
 						</td>
 					</tr>

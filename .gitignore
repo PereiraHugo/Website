@@ -1,1 +1,2 @@
-/Static/images *.JPG
+__pycache__
+Static/images/*.JPG

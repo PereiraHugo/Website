@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from .apps import ContactForm
 import re
+import json
 
 
 # Create your views here.
@@ -17,20 +18,30 @@ def projects(request):
     template = 'projects.html'
     return render(request, template, context)
 
+def cys(request):
+    with open('Static/json/cys.json') as f:
+        context = json.load(f)
+    template = 'cys.html'
+    return render(request, template, context)
+
 def photography(request):
     context = {}
     template = 'photography.html'
     return render(request, template, context)
 
 def about(request):
-    context = {}
+    with open('Static/json/about.json') as f:
+        context = json.load(f)
     template = 'about.html'
     return render(request, template, context)
 
 def contact(request):
     title = "Contact"
     form = ContactForm(request.POST or None)
-    context = {"title": title, "form": form}
+    with open('Static/json/contact.json') as f:
+        context = json.load(f)
+    #context["title"] = title
+    context["form"] = form
 
     if form.is_valid():
         subject = form.cleaned_data['name'] + " - " + form.cleaned_data['subject']

@@ -1,0 +1,577 @@
+/* Defining Colours */
+:root {
+    --brown: #423b38;
+    --green: #329462;
+    --lightgreen: #81CAA5;
+    --darkgreen: #096436;
+    --pink: #D7658D;
+    --lightpink: #F4BDD1;
+    --darkpink: #9A224C;
+    --beige: #FFB458;
+    --lightbeige: #FFE6C6;
+    --darkbeige: #B07226;
+    --violet: #5F4360;
+    --cyan: #0F594D;
+    --darkcyan: #002620;
+    --ligthcyan: #438A7E;
+    /*FFD39E*/
+  }
+  
+  /* Existent Structure*/
+  body {
+      background-color: white;
+      font-family: "verdana";
+      color : var(--brown);
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  td {
+      padding-top: .5em;
+      padding-bottom: .5em;
+  }
+  p {
+      text-align: justify;
+  }
+  
+  .modal{
+      z-index: 100001 !important;
+  }
+  /* Home */
+  .avatar {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+  }
+  .avatar svg,
+  .avatar img {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%; 
+      max-width: 300px;
+      max-height: 300px;
+  }
+  .avatar img {
+      width: 85%;
+      height: 85%;
+      border-radius: 50%;
+      transform-origin: 0 0;
+      animation: 3s fadeIn;
+  }
+  @-moz-keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @-webkit-keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @-o-keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  .button:hover {
+      background-color: grey;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .button {
+      background-color: white;
+      border: none;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 10%;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  .home_navbar {
+      top : 80%;
+      text-align: center;
+      width: 100%;
+      padding-top:1%;
+  }
+  .body_home {
+      padding:5%;
+  }
+  .logo_home {
+      max-width: 13%;
+      max-height: 13%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+  }
+  
+  /*  Modal Add Animation */
+  .modal-content, #caption {    
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+      from {
+          -webkit-transform:scale(0)
+      } 
+      to {
+          -webkit-transform:scale(1)
+      }
+  }
+  
+  @keyframes zoom {
+      from {
+          transform:scale(0)
+      } 
+      to {
+          transform:scale(1)
+      }
+  }
+  
+  /* Modal Close Button */
+  .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;    
+  }
+  
+  /* Modal 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+      .modal-content {
+          width: 100%;
+      }
+  }
+  
+  /* Header */
+  /* Nagivation Bar */
+  .navbar-nav > li{
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  /* Nagivation All Site Customized */
+  .navbar-customized {
+      font-size: 14pt;
+      background-color: var(--brown);
+      border-bottom: 6px solid white;
+  }
+  .navbar-customized .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+      color: white;
+      transition: all 0.5s ease-in-out;
+  }
+  .navbar-customized .navbar-nav .nav-link {
+      color: var(--beige); 
+  }
+  .navbar-customized .navbar-nav .show > .nav-link,
+  .navbar-customized .navbar-nav .active > .nav-link,
+  .navbar-customized .navbar-nav .nav-link.show,
+  .navbar-customized .navbar-nav .nav-link.active {
+      color: white;
+  }
+  
+  /* Nagivation Specific Home Customized */
+  .navbar-home {
+      font-size: 20pt;
+      background-color: var(--brown);
+  }
+  .navbar-home .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+      color: var(--beige);
+      transition: all 1s ease-in-out;
+  }
+  .navbar-home .navbar-nav .nav-link {
+      color: white; 
+  }
+  /* Navigation Specific Body*/
+  .navbar-right {
+      font-size: 14pt;
+      background-color: var(--brown);
+      border: 3px solid white;
+      position: fixed;
+      right: 2%;
+      top : 30%;
+  
+  }
+  .navbar-rigth a {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size:1.5em; 
+  }
+  /* Icon Header */
+  .header_logo {
+      width: 48px ;
+      height: 48px;
+      max-width: 48px;
+      max-height: 48px;
+  }
+  
+  
+  /* Main */
+  .main{
+      height: 100%;
+      -webkit-animation: fadeIn 1.5s ease-in;
+      animation: fadeIn 1.5s ease-in;
+      -moz-animation: fadeIn 1.5s ease-in;
+  }
+  /* Main Icon */
+  .icon{
+      max-width:100px;
+      max-height:100px;
+  }
+  .icon2{
+      max-width:150px;
+      max-height:150px;
+  }
+  /*Main Link */
+  .main a {
+      color : #f5bb73;
+  }
+  .main a:hover {
+      text-decoration: none;
+      color:#FFD6A3;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  }
+  .main a:visited {
+      color : #f5bb73;
+  }
+  
+  /*Main Title */
+  .main h1 {
+      text-align: center;
+      font-style: bold;
+  
+  }
+  .main h2 {
+      text-align: justify;
+      text-transform: uppercase;
+      font-size: 1em;
+      color : var(--brown);
+  
+  }
+  .main h3 {
+      text-align: center;
+      color : var(--brown);
+      font-size: 2.5em;
+      padding-bottom: 0.5em;
+  }
+  .main h4 {
+      text-align: center;
+      color : white;
+      padding-top: 1em;
+  }
+  .main h5 {
+      text-align: justify;
+      color : var(--brown);
+  }
+  .main h6 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      color : var(--brown);
+  }
+  
+  .header-category {
+      width: 100%;
+      position: relative;
+      background-size: 62px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      display: inline-block;
+      border-bottom: 2px solid;
+      text-align: center;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+  }
+  
+  /*Main Table */
+  .main table{
+      text-align: center;
+      width: 100%;
+  }
+  .column_2 {
+      width: 50%;
+  }
+  .column_3 {
+      width: 33%;
+  }
+  
+  /*Main About */
+  .about {
+      padding-top: 6em;
+      padding-bottom: 6em;
+      background-color: white;
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  .avatar_about {
+      display: block;
+      margin: 20px auto;
+      width: 30%;
+      height: 30%;
+      border-radius: 100%;
+      border-style: solid;
+      border-color: var(--beige);
+      border-width: 0.2em;
+  }
+  .header_about {
+      border-color: var(--beige);
+  }
+  .about_category{
+      padding-top: 2em;
+      padding-bottom: 2em;
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  .btn_dl_CV{
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: var(--beige);
+      color: black;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 16px;
+  }
+  /* Main Contact */
+  .contact {
+      padding-top: 6em;
+      padding-bottom: 6em;
+      background-color: white;
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  .header_contact {
+      border-color: var(--beige);
+  }
+  
+  form input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+  form textarea {
+      width: 100%;
+  }
+  .btn_contact_sbm {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: var(--beige);
+      color: black;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 16px;
+  
+  }
+  .contact-form-container {
+      background-color: var(--brown);
+      color :white;
+      max-width: 60%;
+      margin: 0 auto;
+      padding: 30px;
+      position: relative;
+  
+  }
+  .adverstise-text {
+      color: white !important;
+      text-align: right;
+  }
+  
+  /* Main Photography*/
+  .photography {
+      padding-top: 6em;
+      padding-bottom: 6em;
+      background-color: white;
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  .header_photography {
+      border-color: var(--beige);
+  }
+  .table_picture {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+  }
+  .pictures_table {
+      vertical-align: center;
+      width: 50%; 
+      height: 50%;
+      border-radius: 30%;
+      transition: all 1s ease-in-out;
+      min-width: 50%;
+      min-height: 50%; 
+  }
+  /*
+  .pictures_table:hover{
+      transform: scale(3,2);
+      border-radius: 3%;
+  }*/
+  
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+      display: block; 
+  }
+      
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+      
+  tr { border: 1px solid #ccc; }
+      
+  td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+  }
+}
+  /* Main Projects */
+  .projects {
+      padding-top: 6em;
+      padding-bottom: 6em;
+      background-color: white;
+      -webkit-animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
+      -moz-animation: fadeIn 1s ease-in;
+  }
+  .header_projects {
+      border-color: var(--beige);
+  }
+  .pictures_projects {
+      vertical-align: center;
+      max-width: 200px; 
+      max-height: 200px;
+      border-radius: 3%;
+  }
+  
+  /* Footer */
+  footer {
+      width: 100%;
+      background-color: var(--brown);
+      border-top: 2px solid #C7C095;
+      color: #ebe5c8;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      position: static;
+      left: 0px;
+      bottom: 0px;
+      overflow: hidden;
+      font-weight: 900;
+  }
+  .footer-container {
+      float: left;
+      margin-left: 1.5%;
+      padding-top: 13px;
+      width: 100%;
+      vertical-align: middle;
+      position: relative;
+  }
+  .table_footer {
+      width: 95%;
+      border-collapse: collapse;
+      padding: 2em;
+      margin-left: 2em;
+      margin-right: 5em;
+  }
+  
+  /* Footer Logo */
+  .footer-image img {
+      color: #ebe5c8;
+      border: none;
+  }
+  
+  .footer_logo {
+      width: 50px;
+      height: 50px;
+      max-width: 65px;
+      max-height: 65px;
+  }
+
+   /* Main Cys */
+   .cys {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    background-color: white;
+    -webkit-animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-in;
+    -moz-animation: fadeIn 1s ease-in;
+}
