@@ -15,7 +15,7 @@ SECRET_KEY = os.environ['DJANGOKEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
         'SERVER-IP',
@@ -91,7 +91,7 @@ EMAIL_HOST_PASSWORD = os.environ['MYEMAILPASSWORD']
 #    }
 #}
 """
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -102,7 +102,7 @@ DATABASES = {
         'PASSWORD': '8f36232f26'
     }
 }
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
