@@ -1,3 +1,4 @@
+
 """
 Django settings for WebSite project.
 
@@ -14,9 +15,15 @@ SECRET_KEY = os.environ['DJANGOKEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
+        'SERVER-IP',
+        'localhost',
+        '127.0.0.1',
+        '35.225.167.181',
+        'www.pereirahugo.ovh',
+        'pereirahugo.ovh',
 ]
 
 
@@ -49,7 +56,7 @@ ROOT_URLCONF = 'WebSite.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -76,14 +83,25 @@ EMAIL_HOST_PASSWORD = os.environ['MYEMAILPASSWORD']
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+"""
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+"""
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'djangostack',
+        'HOST': '/opt/bitnami/postgresql',
+        'PORT': '5432',
+        'USER': 'bitnami',
+        'PASSWORD': '8f36232f26'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -126,10 +144,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_URL = '/static/'
-
+STATIC_URL = os.path.join(os.path.dirname(BASE_DIR),'/Static/')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "/Static/")
+#STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),"Static", "Static"),)
 
 if DEBUG:
     MEDIA_URL = '/Media/'
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "Static", "Static-only")
     STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),"Static", "Static"),)
+
