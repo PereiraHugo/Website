@@ -1,6 +1,6 @@
 {
     "CYS_description":"Have you ever had a lack of inspiration? Have you ever wondered how to start a story? Or do you simply want to play and have some fun? Well, this app is made for you. C.Y.S will stimulate your creativity and imagination. You will start by choosing either the Alphabetic or Category mode. Depending on the mode you choose, you will have to pick at least one letter or category. Follow the instructions for each mode. You will get a list of words. Then you can start creating your story with them. This app was inspired by the board game : Aye, Dark Overlord!",
     "CYS_skills":"Create Your Story is a MEAN stack app (MongoDB, Express, Angular, Nodejs). For the front-end I use Angular-Cli & Nodejs. For the back-end I use MongoDB, Express and Nodejs. The back-end is an api to retrieve the information of database MongoDB. I use the cloud furnish by MongoDB, also called MongoAtlas to store my database.",
-    "CYS_adress": "The app is accessible at this adress : ",
-    "CYS_adress2": "If you want to test the Api only go to this adress : "
+    "CYS_adress": "The app is accessible at this address: ",
+    "CYS_adress2": "If you want to test the Api, just go to this address: "
 }
