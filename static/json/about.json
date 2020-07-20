@@ -9,13 +9,105 @@
     "Interest": "I also love traveling and improving my photography skills while discovering new places around the world.",
     "Opportunities": "I am always open to exciting new job opportunities. You’re welcome to have a look at my work and you’ll find my Curriculum Vitae here. Please ",
     "Opportunities2":" if you’d like, I look forward to hearing from you.",
-    "CEA_description": "NGS Workflow (RNAseq & Evolution) Modification and Improvement. Benchmarking of all workflow engines. Creation of a web GUI for the platform NGS services. ",
-    "CEA_skills": "Bash, Python, C, R, JavaScript, Php, HTML, Git, SVN, Workflow Engine (Snakemake, Nextflow, Bpipe, Ruffus, Luigi, Pegasus), user require-ments gathering.",
-    "CEA_supervisor": "Lead by S. Cruveiller, D. Vallenet",
-    "IRHS_description":"Interface development of a new clustering tool for Co-Regulated Genes Identification (CoRGI). Translation from VBA to R and JavaScript of new clustering method.",
-    "IRHS_skills":"JavaScript (Qooxdoo framework, library D3JS), Python & R computing, Git, user requirements gathering, tools for large datasets.",
-    "IRHS_supervisor":"Supervised by S. Pelletier, J-P. Renou and S. Gaillard",
-    "IPBS_description":"Construction of directed genetic networks, with the WGCNA method, involved in the support function of hematopoietic stem cells.",
-    "IPBS_skills": "R computing, Use of database and analysis tools such as Genomatix & miRTrail.",
-    "IPBS_supervisor": "Supervised by C. Durand and P. Charbord"
+    "Experiences" : {
+        "CBC" : {
+            "image" : "images/CBC.svg",
+            "workPlace" : "Cabinets by Computer",
+            "jobTitle" : "Full-Stack Software Developer",
+            "date" : "April 2020 - Now",
+            "responsabilities" :  [
+                "Remote consultant for an Australian SaaS technology firm with a large multifaceted PHP codebase.",
+                "Improvement of two apps about kitchen cabinet design by resolving issues, clarifying the code and addition of features."
+            ],
+            "skills" : [ 
+                " Full-Stack Development",
+                " MVC : PHP, HTML, JavaScript (JQuery, D3.js)",
+                " SQL : MySQL",
+                " Object-oriented programming",
+                " Versioning : GitLab"
+            ],
+            "supervisor" : "Lead by J. Calaby"
+        },
+        "NSQUARED" : {
+            "image" : "images/NSQUARED.svg",
+            "workPlace" : "N-Squared Software",
+            "jobTitle" : "Full-Stack Software Developer",
+            "date" : "July 2019 - March 2020",
+            "responsabilities" :  [
+                "Remote consultant for an Australian SaaS technology firm with a large multifaceted PHP codebase.",
+                "Improvement of two apps about kitchen cabinet design by resolving issues, clarifying the code and addition of features.",
+                "Working with CI/CD toolchains, including TeamCity, to deploy updates to production environments in an AWS cloud environment.",
+                "Creation of a new web GUI with Angular using a REST API.",
+                "Working with minimal requirements from our BA, I successfully built additional reporting features into a C# based Windows application used for critical business processes at one of N-Squared's clients.",
+                " Implementation of new features to a telecommunication project in Java to improve the management of Short Message Peer to Peer Protocol."
+            ],
+            "skills" : [ 
+                " Full-Stack Development",
+                " MVC : PHP, HTML, JavaScript (JQuery, D3.js)",
+                " AWS",
+                " SQL : MySQL",
+                " Object-oriented programming",
+                " TypeScript : Angular",
+                " Versioning : GitLab, Mercurial",
+                " Java",
+                "C#"
+            ],
+            "supervisor" : "Lead by J. Love, J. Couper-Smartt"
+        },
+        "CEA" : {
+            "image" : "images/CEA.svg",
+            "workPlace" : "French Alternative Energies and Atomic Energy Commission",
+            "jobTitle" : "Research Engineer in Bioinformatics",
+            "date" : "Mai 2016 - November 2017",
+            "responsabilities" :  [
+                "Improvement of a computing workflow by resolving issues, clarifying and addition of features to the code.",
+                "Benchmarking of all workflow engines, selection of the one that best fits with the team needs.",
+                "Modification and Improvement of the web site for the sequencing analysis platform services to make the method available to users, such as biologists, after gatherings the user requirements with regular touch points.",
+                "Convention work presentation : general presentation of the platform and the improvements to the user in the modified workflow.",
+                "Leading role in the French community around workflow engines benchmarking, I participate in the organisation of event and I had in charge the training of co-workers to use workflow engines correctly."
+            ],
+            "skills" : [ 
+                "Full-Stack Development", 
+                "MVC : HTML, PHP, JavaScript (JQuery)",
+                "Object-oriented programming",
+                "SQL : MySQL",
+                "Versioning : SVN"
+            ],
+            "supervisor" : "Lead by S. Cruveiller, D. Vallenet"
+        },
+        "IRHS" : {
+            "image" : "images/IRHS.svg",
+            "workPlace" : "Research Institute of Horticulture and Seeds",
+            "jobTitle" : "Master’s Degree - 2nd year Internship",
+            "date" : "Febuary 2015 - July 2015",
+            "responsabilities" :  [
+                "Implementation of a new clustering method composed of transformation, bi-clustering and selection algorithms.",
+                "Translation of a new clustering method from VBA to R, then to modern JavaScript.",
+                "Development of a new Web app to make the method available to users after gatherings the user requirements with regular touch points.",
+                "Convention work presentation : presentation of the clustering method and the web app."
+            ],
+            "skills" : [
+                "Modern JavaScript : Qooxdoo framework (Web App), D3.js",
+                "Object-oriented programming"
+            ],
+            "supervisor" : "Supervised by S. Pelletier, J-P. Renou and S. Gaillard"
+        },
+        "IPBS" : {
+            "image" : "images/IPBS.svg",
+            "workPlace" : "Migration and differentiation of hematopoietic stem cells - Institut of Biologie",
+            "jobTitle" : "Master’s Degree - 1st year Internship",
+            "date" : "Mars 2014 - June 2014",
+            "responsabilities" :  [
+                "Implementation of an algorithm that estimates the relation between two genes of a network and determine the direction of the relation",
+                "Design of an interactive command-Line interface for the use of the algorithm by biologists",
+                "Gathering of the user requirements to adapt the command-line interface"
+            ],
+            "skills" : [
+                "R",
+                "Command-line interface",
+                "Test-driven development"
+            ],
+            "supervisor" : "Lead by S. Cruveiller, D. Vallenet"
+        }
+    }
 }

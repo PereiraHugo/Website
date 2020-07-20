@@ -310,8 +310,8 @@
       max-height:100px;
   }
   .icon2{
-      max-width:150px;
-      max-height:150px;
+      max-width:250px;
+      max-height:250px;
   }
   .td_icon{
     width: 10%
@@ -449,7 +449,17 @@
     margin-top: 16px;
     float: right;
     border-radius: 15px; 
-}
+  }
+
+  .list_about{
+      text-align: justify;
+  }
+
+  tr.border_bottom td {
+    border-top:2pt solid var(--beige);
+    border-bottom:2pt solid var(--beige);
+  }
+
 
   @media 
   only screen and (max-width: 760px),

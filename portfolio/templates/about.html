@@ -95,135 +95,112 @@
 				<svg id="pieChart" value=""></svg>
 				<br>
 			</div>
-			<!-- Programming -->
-			<!-- Toolbox -->
-			<div id="toolbox" class="about_category">
-				<h3>Toolbox</h3>
-				<table>
-					<tr>
-						<td class="column_3">
-							<img src="{% static 'images/Django.svg' %}" alt="Django" class="icon">
-							<h4>Django</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/GitHub.svg' %}" alt="GitHub" class="icon">
-							<h4>GitHub</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/VisualStudio2017.svg' %}" alt="Visual Studio Code & 2017" class="icon">
-							<h4>Visual Studio Code & 2017</h4>
-						</td>
-					</tr>
-					<tr>
-						<td class="column_3">
-							<img src="{% static 'images/Sublime.svg' %}" alt="Sublime Text" class="icon">
-							<h4>Sublime Text</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/Snakemake.svg' %}" alt="Snakemake" class="icon">
-							<h4>Snakemake</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/Inkscape.svg' %}" alt="Inkscape" class="icon">
-							<h4>Inkscape</h4>
-						</td>
-					</tr>
-					<tr>
-						<td class="column_3">
-							<img src="{% static 'images/D3js.svg' %}" alt="D3js" class="icon">
-							<h4>D3js</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/Nodejs.svg' %}" alt="Nodejs" class="icon">
-							<h4>Nodejs</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/Angular.svg' %}" alt="Angular" class="icon">
-							<h4>Angular</h4>
-						</td>
-					</tr>
-					<tr>
-						<td class="column_3">
-							<img src="{% static 'images/MongoDB.svg' %}" alt="MongoDB" class="icon">
-							<h4>MongoDB</h4>
-						</td>
-						<td class="column_3">
-							<img src="{% static 'images/Express.svg' %}" alt="Express" class="icon">
-							<h4>Express</h4>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<!-- Toolbox -->
-			<!-- Experience -->
-			<div id="experience" class="about_category">
-				<h3>Experience</h3>
-				<table>
-					<tr>
-						<td class="column_2">
-							<img src="{% static 'images/CEA.svg' %}" alt="CEA" class="icon2">
-						</td>
-						<td class="column_2">
-							<h4 class="workplace">French Alternative Energies and Atomic Energy Commission </h4>
-							<h2>Research Engineer in Bioinformatics</h2>
-							<h2>Mai 2016 - November 2017</h2>
-							<p>
-								{{CEA_description}}
-							</p>
-							<p>
-								{{CEA_skills}}
-							</p>
-							<p>
-								{{CEA_supervisor}}
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="column_2">
-							<img src="{% static 'images/IRHS.svg' %}" alt="IRHS" class="icon2">
-						</td>
-						<td class="column_2">
-							<h4 class="workplace">Research Institute of Horticulture and Seeds</h4>
-							<h2>Master’s Degree - 2nd year Internship</h2>
-							<h2>Fev 2015 - Jul 2015</h2>
-							<p>
-								{{IRHS_description}}
-							</p>
-							<p>
-								{{IRHS_skills}}
-							</p>
-							<p>
-								{{IRHS_supervisor}}
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="column_2">
-							<img src="{% static 'images/IPBS.svg' %}" alt="IPBS" class="icon2">
-						</td>
-						<td class="column_2">
-							<h4 class="workplace">Migration and differentiation of hematopoietic stem cells - Institut de Biologie</h4>
-							<h2>Master’s Degree - 1st year Internship</h2>
-							<h2>Mar 2014 - Jun 2014</h2>
-							<p>
-								{{IPBS_description}}
-							</p>
-							<p>
-								{{IPBS_skills}}
-							</p>
-							<p>
-								{{IPBS_supervisor}}
-							</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div id="CV">
-				<a href="{% static 'pdf/HugoPereira_CV-NZ.pdf' %}" download>
-					<button id="dl_CV" name="dl_CV" class="btn_dl_CV">Download CV</button>
-				</a>
-			</div> 
 		</div>
+		<!-- Programming -->
+		<!-- Experience -->
+		<div id="experience" class="about_category">
+			<h3>Experience</h3>
+			<table>
+				{% for key, values in Experiences.items %}
+					<tr class="border_bottom">
+						<td class="column_3">
+							<img src="{% static values.image %}" alt="{{key}}" class="icon2">
+						</td>
+						<td class="column_2">
+							<h5 class="workplace" style="font-weight: bold;">{{values.workPlace}}</h5>
+							<h2 style="text-align:right">{{values.jobTitle}}</h2>
+							<h2 style="text-align:right; font-style:italic;">{{values.date}}</h2>
+							<p>
+								My responsibilities were :
+								<br>
+								<ul>
+								{% for responsability in values.responsabilities %}
+									<li class="list_about">{{responsability}}</li>
+								{% endfor %}
+								</ul>
+							</p>
+							<p>
+								My skills used :
+								<br>
+								<ul>							
+								{% for skill in values.skills %}
+									<li class="list_about">{{skill}}</li>
+								{% endfor %}
+								</ul>
+							</p>
+							<p>
+								{{values.supervisor}}
+							</p>
+						</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+		<!-- Experience -->
+		<!-- Toolbox -->
+		<div id="toolbox" class="about_category">
+			<h3>Toolbox</h3>
+			<table>
+				<tr>
+					<td class="column_3">
+						<img src="{% static 'images/Django.svg' %}" alt="Django" class="icon">
+						<h4>Django</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/GitHub.svg' %}" alt="GitHub" class="icon">
+						<h4>GitHub</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/VisualStudio2017.svg' %}" alt="Visual Studio Code & 2017" class="icon">
+						<h4>Visual Studio Code & 2017</h4>
+					</td>
+				</tr>
+				<tr>
+					<td class="column_3">
+						<img src="{% static 'images/Sublime.svg' %}" alt="Sublime Text" class="icon">
+						<h4>Sublime Text</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/Snakemake.svg' %}" alt="Snakemake" class="icon">
+						<h4>Snakemake</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/Inkscape.svg' %}" alt="Inkscape" class="icon">
+						<h4>Inkscape</h4>
+					</td>
+				</tr>
+				<tr>
+					<td class="column_3">
+						<img src="{% static 'images/D3js.svg' %}" alt="D3js" class="icon">
+						<h4>D3js</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/Nodejs.svg' %}" alt="Nodejs" class="icon">
+						<h4>Nodejs</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/Angular.svg' %}" alt="Angular" class="icon">
+						<h4>Angular</h4>
+					</td>
+				</tr>
+				<tr>
+					<td class="column_3">
+						<img src="{% static 'images/MongoDB.svg' %}" alt="MongoDB" class="icon">
+						<h4>MongoDB</h4>
+					</td>
+					<td class="column_3">
+						<img src="{% static 'images/Express.svg' %}" alt="Express" class="icon">
+						<h4>Express</h4>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- Toolbox -->
+		<div id="CV">
+			<a href="{% static 'pdf/HugoPereira_CV-NZ.pdf' %}" download>
+				<button id="dl_CV" name="dl_CV" class="btn_dl_CV">Download CV</button>
+			</a>
+		</div> 
 	</div>
 </div>
 <!-- experience -->
