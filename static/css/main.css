@@ -435,9 +435,21 @@
       background: var(--beige);
       color: black;
       padding: 10px;
-      font-size: 15px;
+      font-size: 17px;
       margin-top: 16px;
   }
+
+  .btn_about{
+    cursor: pointer;
+    border: none;
+    background: var(--beige);
+    color: black;
+    padding: 10px;
+    font-size: 17px;
+    margin-top: 16px;
+    float: right;
+    border-radius: 15px; 
+}
 
   @media 
   only screen and (max-width: 760px),
