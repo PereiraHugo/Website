@@ -1,6 +1,7 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block body %}
+
 <div id="about" class="about">
 	<div class="container">
 		<!-- header category about -->
@@ -88,10 +89,12 @@
 		<!-- Programming -->
 		<div id="programming" class="about_category">
 			<h3>Programming</h3>
+			<br>
+			<button id="changePC" onclick="changePieChart();">Change Pie change</button>
 			<div id="d3draw" style="min-height: 600px; min-width: 600px;">
-				<svg id="timepiechart" style="display:block; margin-bottom: 1em;" ></svg>
+				<svg id="pieChart" style="display:block;" value=""></svg>
+				<!--<svg id="numbersPC" style="display:block;"></svg>-->
 				<br>
-				<svg id="numberspiechart" style="display:block; margin:auto;"></svg>
 			</div>
 			<!-- Programming -->
 			<!-- Toolbox -->

@@ -163,8 +163,6 @@ var programming_time =[
 {"language":"CSS","time":6.5},
 {"language":"R","time":9}]
 
-PieChart(programming_time,"time");
-
 var projects_number =[
 {"language":"Python","numbers":5},
 {"language":"C#","numbers":3},
@@ -177,10 +175,29 @@ var projects_number =[
 {"language":"CSS","numbers":4},
 {"language":"R","numbers":5}]
 
+function changePieChart() {
+	$("#pieChart").empty();
+	if($("#pieChart").val() == "time"){
+		PieChart(projects_number,"numbers","pieChart");
+		$("#pieChart").val("numbers");
+	} else if($("#pieChart").val() == "numbers") {
+		PieChart(programming_time,"time","pieChart");
+		$("#pieChart").val("time");
+	}
+}
 
-//PieChart(projects_number,"numbers")
+function randomDisplayPieChart() {
+	//Get random interger from 0 to 10 
+	var randInt = Math.floor(Math.random() * 11);
+	if(randInt % 2 == 0) {
+		PieChart(programming_time,"time","pieChart");
+		$("#pieChart").val("time");
+	} else {
+		PieChart(projects_number,"numbers","pieChart");
+		$("#pieChart").val("numbers");
+	}
+}
 
-//PieChart(programming_time,"time")
-
-window.onload = PieChart(programming_time,"time","timepiechart");
-window.onload = PieChart(projects_number,"numbers","numberspiechart");
+$(document).ready(function () {
+	randomDisplayPieChart();
+});
