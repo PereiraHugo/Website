@@ -1,6 +1,6 @@
 from django.urls import path, re_path
 
-from Portfolio import views as portfolio_views
+from portfolio import views as portfolio_views
 
 urlpatterns = [
     re_path(r'^$', portfolio_views.home, name='home'),

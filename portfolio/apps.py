@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 from django import forms
 
-class PortfolioConfig(AppConfig):
-    name = 'Portfolio'
+class portfolioConfig(AppConfig):
+    name = 'portfolio'
 
 class ContactForm(forms.Form):
 	name = forms.CharField(required=True, max_length=100, label="Name:",)

@@ -8,14 +8,15 @@ Django settings for WebSite project.
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['DJANGOKEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
         'SERVER-IP',
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'crispy_forms',
     'fa',
-    'Portfolio'
+    'portfolio'
 ]
 
 MIDDLEWARE = [
@@ -52,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'WebSite.urls'
+ROOT_URLCONF = 'website.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WebSite.wsgi.application'
+WSGI_APPLICATION = 'website.wsgi.application'
 
 
 # My contact email
@@ -92,6 +93,7 @@ EMAIL_HOST_PASSWORD = os.environ['MYEMAILPASSWORD']
 #}
 """
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -102,7 +104,7 @@ DATABASES = {
         'PASSWORD': '8f36232f26'
     }
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -150,6 +152,6 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "/Static/")
 
 if DEBUG:
     MEDIA_URL = '/Media/'
-    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "Static", "Static-only")
-    STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),"Static", "Static"),)
+    #STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "Static", "Static-only")
+    STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),"static"),)
 

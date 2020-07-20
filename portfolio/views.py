@@ -30,7 +30,7 @@ def photography(request):
     return render(request, template, context)
 
 def about(request):
-    with open('Static/json/about.json') as f:
+    with open('static/json/about.json') as f:
         context = json.load(f)
     template = 'about.html'
     return render(request, template, context)
@@ -38,7 +38,7 @@ def about(request):
 def contact(request):
     title = "Contact"
     form = ContactForm(request.POST or None)
-    with open('Static/json/contact.json') as f:
+    with open('static/json/contact.json') as f:
         context = json.load(f)
     #context["title"] = title
     context["form"] = form
