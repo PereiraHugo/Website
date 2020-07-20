@@ -20,10 +20,6 @@
         <li {% if request.path == photography %} class="active" {% endif %}>
           <a class="nav-link" href="{% url 'photography' %}" role="button"> Photography </a>
         </li>
-        {% url 'contact' as contact %}
-        <li {% if request.path == contact %} class="active" {% endif %}>
-          <a class="nav-link" href="{% url 'contact' %}" class="fa fa-envelope" role="button"> Contact </a>
-        </li>
       </ul>
     </div>
   </nav>

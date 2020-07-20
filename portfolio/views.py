@@ -35,6 +35,7 @@ def about(request):
     template = 'about.html'
     return render(request, template, context)
 
+'''
 def contact(request):
     title = "Contact"
     form = ContactForm(request.POST or None)
@@ -61,3 +62,4 @@ def contact(request):
 
     template = 'contact.html'
     return render(request, "contact.html", context)
+'''

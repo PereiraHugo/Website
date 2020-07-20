@@ -8,5 +8,5 @@ urlpatterns = [
     re_path(r'^projects/cys$', portfolio_views.cys, name='cys'),
     re_path(r'^photography/$', portfolio_views.photography, name='photography'),
     re_path(r'^about/$', portfolio_views.about, name='about'),
-    re_path(r'^contact/$', portfolio_views.contact, name='contact'),
+    #re_path(r'^contact/$', portfolio_views.contact, name='contact'),
 ]
